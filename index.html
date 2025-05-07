@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Migration Myths</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Migration Myths</h1>
+  <div class="grid-container">
+    <!-- Title 1 -->
+    <div class="card" onclick="toggleInfo('myth6')">
+      Development reduces migration
+    </div>
+    <!-- Title 2 -->
+    <div class="card">Access to basic services is a pull factor for irregular migration</div>
+    <!-- Title 3 -->
+    <div class="card">Muslim migrants refuse to integrate and try to impose their values on host societies.</div>
+    <!-- Title 4 -->
+    <div class="card">Title 4</div>
+    <!-- Title 5 -->
+    <div class="card">Title 5</div>
+    <!-- Title 6 -->
+    <div class="card">Closing borders will reduce or stop migration flows</div>
+  </div>
+
+  <!-- Info Section for Myth 6 -->
+  <div class="info" id="myth6">
+    <p>
+      Many believe that people move to Europe or the U.S. because their home countries are poor and underdeveloped...
+    </p>
+    <img src="migration_hdi_graph.jpg" alt="Migration vs Development Graph" onclick="toggleMore('myth6more')" class="clickable-img"/>
+    
+    <!-- Deeper Layer -->
+    <div class="more-info" id="myth6more">
+      <p>As you can see, as countries develop, more people leave, not fewer...</p>
+      <p>Now the question is, why?</p>
+      <p>The answer comes down to two key changes...</p>
+      <p>In conclusion? For high-income regions like the EU, it's unrealistic to think that more development abroad will mean fewer migrants...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
