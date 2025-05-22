@@ -1,49 +1,173 @@
+/* Background image */
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background: #f9f9f9;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
+  font-family: 'Didot', serif;
+  padding: 20px;
+  margin: 0;
+  background: url('possible_background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+/* Layout for the myth boxes */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Single‐column on narrow screens */
+@media (max-width: 600px) {
   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr;
   }
-  
-  .card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-    background: #eef3ff;
-  }
-  
-  .info, .more-info {
-    display: none;
-    background: #e4f0ff;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-  }
-  
-  .clickable-img {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 15px;
-    cursor: pointer;
-    display: block;
-    border-radius: 8px;
-  }
-  
+}
+
+/* Individual myth card */
+.card {
+  background:  #a9cbda;
+  opacity: 0.8;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  background: #f9e07a;
+}
+
+/* Info boxes */
+.info, .more-info {
+  display: none;
+  background: #ffffff;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Clickable image inside info section */
+.clickable-img {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Clickable button */
+.read-more-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #f9e07a;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.read-more-btn:hover {
+  background: #f9e07a;
+}
+
+/* Modal overlay*/
+.modal {
+  display: none;             
+  position: fixed;           
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;            
+  align-items: center;       
+  justify-content: center;
+}
+
+/* MODAL CONTENT BOX */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+/* CLOSE BUTTON */
+.modal-close {
+  position: absolute;
+  top: 12px; right: 16px;
+  font-size: 1.5rem;
+  color: #777;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+/* modal backdrop */
+.modal {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+  z-index:1000;
+}
+
+/* white box */
+.modal-content {
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  max-width:800px;
+  max-height:80%;
+  overflow-y:auto;
+  position:relative;
+}
+
+/* close “×” */
+.modal-close {
+  position:absolute;
+  top:12px; right:16px;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+/* deeper layer styling */
+.more-info {
+  display: none;
+  margin-top:15px;
+  background:#fafafa;
+  padding:20px;
+  border-radius:8px;
+}

@@ -10,36 +10,75 @@
   <h1>Migration Myths</h1>
   <div class="grid-container">
     <!-- Title 1 -->
-    <div class="card" onclick="toggleInfo('myth6')">
-      Development reduces migration
+    <div class="card" onclick="showModal('M1')">
+      "Development reduces migration."
     </div>
     <!-- Title 2 -->
-    <div class="card">Access to basic services is a pull factor for irregular migration</div>
-    <!-- Title 3 -->
-    <div class="card">Muslim migrants refuse to integrate and try to impose their values on host societies.</div>
+    <div class="card" onclick="showModal('M2')">
+      "Access to basic services is a pull factor for irregular migration."
+    </div>
+      <!-- Title 3 -->
+    <div class="card">
+      "Muslim migrants refuse to integrate and try to impose their values on host societies."
+    </div>
     <!-- Title 4 -->
-    <div class="card">Title 4</div>
+    <div class="card">
+      Title 4
+    </div>
     <!-- Title 5 -->
-    <div class="card">Title 5</div>
+    <div class="card">
+      Title 5
+    </div>
     <!-- Title 6 -->
-    <div class="card">Closing borders will reduce or stop migration flows</div>
+    <div class="card">
+      "Closing borders will reduce or stop migration flows.""
+    </div>
   </div>
 
-  <!-- Info Section for Myth 6 -->
-  <div class="info" id="myth6">
+<!-- Info M1 -->
+  <div class="info" id="M1" style="display:none;">
+    <!-- Layer 1 -->
     <p>
       Many believe that people move to Europe or the U.S. because their home countries are poor and underdeveloped...
     </p>
-    <img src="migration_hdi_graph.jpg" alt="Migration vs Development Graph" onclick="toggleMore('myth6more')" class="clickable-img"/>
-    
-    <!-- Deeper Layer -->
-    <div class="more-info" id="myth6more">
+    <img
+      src="migration_hdi_graph.jpg"
+      alt="Migration vs Development Graph"
+      onclick="toggleMore('M1more')"
+      class="clickable-img"
+    />
+    <!-- Deeper Layer M1 -->
+    <div class="more-info" id="M1more">
       <p>As you can see, as countries develop, more people leave, not fewer...</p>
       <p>Now the question is, why?</p>
       <p>The answer comes down to two key changes...</p>
       <p>In conclusion? For high-income regions like the EU, it's unrealistic to think that more development abroad will mean fewer migrants...</p>
     </div>
   </div>
+
+  <!-- Info M2 -->
+  <div class="info" id="M2">
+    <p>
+      Many believe that people migrate irregularly to access free services such as healthcare or education in wealthier countries. The idea is that migrants are drawn by the prospect of receiving public benefits without having contributed to the system. As a result, some governments have attempted to restrict access to these services as a way to reduce irregular migration. But the evidence tells a different story.
+    </p>
+    <!-- Deeper Layer M2-->
+    <button class="read-more-btn" onclick="showModal('M2more')">
+      Read more
+    </button>
+    <div class="more-info" id="M2more">
+      <p>While access to basic services like healthcare and education can improve a person’s quality of life, they are not the main reason people migrate—especially not irregularly. Studies consistently show that the top factors influencing migration are better job opportunities, higher wages, safety, and political freedom—not access to welfare.</p>
+    </div>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <div id="modal-body"><!-- some image idk --></div>
+    </div>
+  </div>
+
+
 
   <script src="script.js"></script>
 </body>
